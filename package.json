@@ -1,0 +1,20 @@
+{
+  "name": "oura-v2test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-sheets-api": "^1.0.1",
+    "googleapis": "^100.0.0",
+    "oura-api-v2-client": "^0.1.7"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
+  }
+}

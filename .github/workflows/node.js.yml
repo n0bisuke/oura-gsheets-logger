@@ -1,0 +1,44 @@
+name: 1日ごとに実行
+
+#毎日0時0分
+# on:
+#   schedule:
+#   - cron:  '0 9 * * *'
+
+on:
+  push:
+    branches: [ main ]
+    # プッシュ時に動作する
+
+jobs:
+  build:
+
+    # このジョブのために ubuntu サーバーを準備
+    # まっさらなサーバーなので、以下で Node.js 自体の準備や npm install を行う
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    strategy:
+      matrix:
+        node-version: [17.x]
+
+    # 以下が実際のステップ
+    steps:
+
+    # この例では、v2 を使用することにより、チェックアウトアクションの安定版を確実に使用するようにしています
+    - uses: actions/checkout@v2
+    # Node.js 17.x のセットアップ
+    - name: Use Node.js 17.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: '17.x'
+    # package.json を参考にインストールがはじまる、この場合は axios がインストール    
+    - name: yarn install command
+      run: yarn install
+
+    - name: start action...
+      run: > 
+        OURA_ACCESS_TOKEN=${{secrets.OURA_ACCESS_TOKEN}}
+        GOOGLE_SA_KEY_JSON=${{secrets.GOOGLE_SA_KEY_JSON}}
+        SHEET_ID=${{secrets.SHEET_ID}}
+        node app.js
