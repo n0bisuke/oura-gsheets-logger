@@ -1,13 +1,13 @@
 name: 1日ごとに実行
 
-#毎日0時0分
-# on:
-#   schedule:
-#   - cron:  '0 9 * * *'
-
+#毎日18時0分
 on:
-  push:
-    branches: [ main ]
+  schedule:
+  - cron:  '0 9 * * *'
+
+# on:
+#   push:
+#     branches: [ main ]
     # プッシュ時に動作する
 
 jobs:
