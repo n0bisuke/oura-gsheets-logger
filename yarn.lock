@@ -514,10 +514,10 @@ object-inspect@^1.9.0:
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.0.tgz#6e2c120e868fd1fd18cb4f18c31741d0d6e776f0"
   integrity sha512-Ho2z80bVIvJloH+YzRmpZVQe87+qASmBUKZDWgx9cu+KDrX2ZDH/3tMy+gXbZETVGs2M8YdxObOh7XAtim9Y0g==
 
-oura-api-v2-client@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/oura-api-v2-client/-/oura-api-v2-client-0.1.7.tgz#1445e20a478d6b8d034cdc48aa42cc7a9cd018e3"
-  integrity sha512-oFOmT/U7/fXIL1jXn27A3FCoPIAyK3iTKg6pg8m3bOuheQwqWa7/sCayKdv0xqsggwH83WvB4SgIgU/zt8DBWg==
+oura-api-v2-client@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/oura-api-v2-client/-/oura-api-v2-client-1.0.0.tgz#66747fa6756773290e39f99e6ec5db7762e57b75"
+  integrity sha512-FRL+eNCSdJ8NiCaL4qgqRA+f8XXBC7tzXcSrDygrhtYREV0nGdusqIMj+U6CRT4JZrIi1wQEAnK6O+2nJt0qew==
   dependencies:
     axios "^0.26.1"
 
